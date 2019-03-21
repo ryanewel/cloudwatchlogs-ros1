@@ -7,11 +7,10 @@ notifications:
     on_success: change
     on_failure: always
     recipients:
-      - ros-contributions@amazon.com
-      - travis-build@platform-notifications.robomaker.aws.a2z.com
+      - ryanewel@amazon.com
 env:
   global:
-    - GITHUB_ACCOUNT=aws-robotics
+    - GITHUB_ACCOUNT=ryanewel
     # uncomment PACKAGE_NAME to build unit tests - REQUIRED if you'd like to run unit tests using colcon
     - PACKAGE_NAME=cloudwatch_logger
     - NO_TEST=true
@@ -25,6 +24,6 @@ matrix:
     - env: ROS_DISTRO=lunar   ROS_VERSION=1
     - env: ROS_DISTRO=melodic ROS_VERSION=1
 install:
-  - git clone https://github.com/aws-robotics/travis-scripts.git .ros_ci
+  - git clone https://github.com/ryanewel/travis-scripts.git .ros_ci
 script:
   - .ros_ci/ce_build.sh
