@@ -24,4 +24,4 @@ matrix:
 install:
   - git clone https://github.com/ryanewel/travis-scripts.git .ros_ci
 script:
-  - .ros_ci/ros1_build.sh
+  - .ros_ci/ce_build.sh
